@@ -34,3 +34,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### API KEY ###
+!**/src/main/kotlin/com/example/utils/
