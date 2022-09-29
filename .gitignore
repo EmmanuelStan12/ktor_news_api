@@ -36,4 +36,4 @@ out/
 .vscode/
 
 ### API KEY ###
-!**/src/main/kotlin/com/example/utils/
+/src/main/kotlin/com/example/utils/Constants.kt
