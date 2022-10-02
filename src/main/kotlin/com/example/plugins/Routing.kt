@@ -1,5 +1,7 @@
 package com.example.plugins
 
+import com.example.data.api.ArticleDatasource
+import com.example.data.api.ArticleDatasourceImpl
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -10,7 +12,9 @@ fun Application.configureRouting() {
 
     routing {
         get("/") {
-            call.respondText("Hello World!")
+            val source = ArticleDatasourceImpl()
+            val result = source.loadLatestArticles()
+            println(result)
         }
     }
 }

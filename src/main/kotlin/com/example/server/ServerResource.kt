@@ -4,13 +4,13 @@ object ServerResource {
     fun serverUrl(
         apiKey: String = API_KEY,
         type: ServerRequestType = ServerRequestType.LATEST_NEWS,
-        categories: List<String> = emptyList(),
-        countries: List<String> = emptyList(),
-        languages: List<String> = emptyList(),
-        domains: List<String> = emptyList(),
-        from_date: String = "",
-        to_date: String = "",
-        query: String = "",
+        categories: List<String>? = null,
+        countries: List<String>? = null,
+        languages: List<String>? = null,
+        domains: List<String>? = null,
+        from_date: String? = null,
+        to_date: String? = null,
+        query: String? = null,
         page: Int = 1
     ): String {
         val url = "apiKey=$apiKey${generateQuery("category", values = categories)}" +
